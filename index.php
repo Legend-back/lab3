@@ -2,8 +2,9 @@
 require_once "Autor.php";
 require_once "Libro.php";
 require_once "Revista.php"; 
+require_once "ImprimirAutor.php";
 
-// ---- autores 
+// autores 
 $autorElenaWhite = new Autor("Elena G. de White", "Americana");
 $autorCSLewis    = new Autor("C. S. Lewis", "Británico");
 $autorGabo       = new Autor("Gabriel García Márquez", "Colombiano");
@@ -22,3 +23,10 @@ $libro2 = new Libro("Ficciones", 1944, $autorBorges);
 // imprimir SOLO una vez cada libro
 echo "\n".$libro1->getInfo()."\n";
 echo "\n".$libro2->getInfo()."\n";
+
+
+$imp = new ImprimirAutor();
+echo $imp->getInfo($autorElenaWhite) . "\n";
+echo $imp->getInfo($autorCSLewis)    . "\n";
+echo $imp->getInfo($autorGabo)       . "\n";
+echo $imp->getInfo($autorBorges)     . "\n";
