@@ -15,4 +15,4 @@ class Libro {
     public function getInfo(): string {
         return "Libro: {$this->titulo} ({$this->anio})\n" . $this->autor->getInfo();
     }
-}
+}   
