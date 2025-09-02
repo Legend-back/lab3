@@ -1,8 +1,9 @@
 <?php
 require_once "Autor.php";
 require_once "Libro.php";
+require_once "IPublicable.php";
 
-class Revista extends Libro {
+class Revista extends Libro implements IPublicable {
     private string $periodicidad;
 
     public function __construct(string $titulo, int $anio, Autor $autor, string $periodicidad) {
@@ -11,7 +12,7 @@ class Revista extends Libro {
     }
 
     public function getInfo(): string {
-        // agrega su dato y luego reutiliza la info del libro
+        // reutiliza la info de Libro y antepone la periodicidad
         return "Revista: {$this->periodicidad} - " . parent::getInfo();
     }
 }

@@ -1,7 +1,8 @@
 <?php
 require_once "Autor.php";
+require_once "IPublicable.php";
 
-class Libro {
+class Libro implements IPublicable {
     private string $titulo;
     private int $anio;
     private Autor $autor;
@@ -15,4 +16,4 @@ class Libro {
     public function getInfo(): string {
         return "Libro: {$this->titulo} ({$this->anio})\n" . $this->autor->getInfo();
     }
-}   
+}
