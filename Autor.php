@@ -10,7 +10,9 @@ class Autor {
     }
 
     // getters
-    public function getNombre(): string { return $this->nombre; }
+    public function getNombre(): string {
+        return $this->nombre;
+    }
     public function getNacionalidad(): string { return $this->nacionalidad; }
 
     // setters 
