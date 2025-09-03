@@ -12,7 +12,7 @@ $autorGabo       = new Autor("Gabriel García Márquez", "Colombiano");
 $autorBorges     = new Autor("Jorge Luis Borges", "Argentino");
 
 
-$imp = new ImprimirAutor();
+$impresor = new ImprimirAutor();
 echo $imp->getInfo($autorElenaWhite) . "\n";
 echo $imp->getInfo($autorCSLewis)    . "\n";
 echo $imp->getInfo($autorGabo)       . "\n";
