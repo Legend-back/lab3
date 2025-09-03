@@ -12,7 +12,6 @@ class Revista implements IPublicable {
     }
 
     public function getInfo(): string {
-        // reutiliza la info de Libro y antepone la periodicidad
         return "Revista: {$this->periodicidad} - " . parent::getInfo();
     }
 }
