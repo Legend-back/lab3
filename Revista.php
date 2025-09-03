@@ -3,7 +3,7 @@ require_once "Autor.php";
 require_once "Libro.php";
 require_once "IPublicable.php";
 
-class Revista extends Libro implements IPublicable {
+class Revista implements IPublicable {
     private string $periodicidad;
 
     public function __construct(string $titulo, int $anio, Autor $autor, string $periodicidad) {
